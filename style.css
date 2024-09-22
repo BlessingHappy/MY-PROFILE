@@ -1,6 +1,4 @@
- 
-        /* Global Styles */
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -13,7 +11,6 @@
             line-height: 1.6;
         }
 
-        
         h2 {
             color: #333;
         }
@@ -31,15 +28,14 @@
         header {
             background-color: #333;
             color: white;
-            padding: 10px 0; /* Reduced padding for smaller header */
+            padding: 10px 0;
             text-align: center;
-            
-            top: 0; /* Stick to the top */
-            z-index: 1000; /* Ensure it's above other content */
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
-            font-size: 2.5em; /* Reduced font size */
+            font-size: 2.5em;
             letter-spacing: 2px;
         }
 
@@ -71,6 +67,7 @@
         #skills {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             margin-bottom: 50px;
         }
 
@@ -81,6 +78,7 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             width: 23%;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         #skills .skill h2 {
@@ -136,12 +134,74 @@
             color: white;
             margin-top: 50px;
         }
-   .welcome-text {
-    font-size: 1.5em; /* Adjust the size as needed */
-    font-weight: bold; /* Make it bold */
-    color: #3498db; /* Change color as desired */
-    margin-top: 20px; /* Add spacing above */
-}
 
-        
-   
+        /* Welcome Text */
+        .welcome-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            #skills .skill {
+                width: 45%; /* Adjusted to 2 columns on medium screens */
+            }
+
+            .project-card {
+                width: 45%; /* Adjusted to 2 columns on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            #skills .skill {
+                width: 100%; /* Full width on smaller screens */
+                margin-bottom: 20px;
+            }
+
+            .project-card {
+                width: 100%; /* Full width on smaller screens */
+            }
+
+            #about img {
+                width: 150px;
+                height: 150px;
+            }
+
+            #about p {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            #about img {
+                width: 120px;
+                height: 120px;
+            }
+
+            #about p {
+                font-size: 1em;
+            }
+
+            .welcome-text {
+                font-size: 1.2em;
+            }
+        }
+  
